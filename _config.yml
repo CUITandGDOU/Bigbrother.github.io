@@ -1,18 +1,66 @@
-# Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
-baseurl:      ""
-paginate:     1
-locale:       "en"
+# Site settings
+title: Hanuman
+description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+cover: assets/images/radhakrishna.jpg
+logo: assets/images/logo.png
+favicon: assets/images/favicon.png
+baseurl: "/Bigbrother.github.io/" # the subpath of your site, e.g. /blog/ or / for root
+# url: "https://samanyougarg.com" # the base hostname & protocol for your site
 
-# About/contact
-author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+pagination:
 
-# Gems
-gems:
-  - jekyll-paginate
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
 
-#Others
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
+
+  per_page: 5
+
+# Social
+facebook: facebook
+twitter: twitter
+github:  github
+
+#Additional Pages
+about: about
+contact: contact
+privacy-policy: privacy-policy
+
+
+permalink: /:title
+
+
+# Google Analytics
+analytics_id: ""
+
+# Build settings
 markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+
+plugins:
+  - jekyll-paginate-v2
+
+
+# Settings for rake task
+safe: False
+lsi: False
+username: CUITandGDOU #github username
+repo: Bigbrother.github.io #github repository
+branch: master #branch
+relative_source: ../Bigbrother.github.io/ #source directory
+destination: ../hanuman-pages/ #destination directory
+production_url:  https://samanyougarg.com/
+source_url:  https://github.com/CUITandGDOU/Bigbrother.github.io #source repository url
+
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml

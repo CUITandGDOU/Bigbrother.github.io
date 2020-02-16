@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-gemspec
 
-gem 'jekyll'
-gem 'jekyll-paginate'
-gem 'kramdown'
-gem 'pygments.rb'
+gem "jekyll", "~> 3.8.5"
+gem 'jekyll-compose', group: [:jekyll_plugins]
+gem "github-pages", "~> 198"
+gem "rake", "~> 12.3.2"
+gem 'jekyll-paginate-v2'
